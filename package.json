@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "modules": "^0.4.0",
+    "node": "^18.20.1"
+  }
+}
+
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import AcmeLogo from '@/app/ui/acme-logo';
 import LoginForm from '@/app/ui/login-form';
  
@@ -14,4 +15,8 @@ export default function LoginPage() {
       </div>
     </main>
   );
+=======
+export default function Page() {
+    return <p>Login Page</p>;
+>>>>>>> 53fc04e2360e153ec65ebdaeba82d3b22a363088
 }
