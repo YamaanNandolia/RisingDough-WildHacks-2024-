@@ -1,5 +1,5 @@
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { inter, robotoCondensed } from '@/app/ui/fonts';
+import { inter, robotoCondensed } from '@/app/ui/fonts/fonts';
 
 export default function AcmeLogo() {
   return (
