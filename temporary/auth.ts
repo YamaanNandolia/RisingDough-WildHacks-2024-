@@ -6,7 +6,7 @@ import { z } from 'zod';
 //need to import user base from SQL
 import { sql } from '@vercel/postgres';
 import type { User } from '@/app/lib/definitions';
-import bcrypt from 'bcrypt';
+import bcryptjs from 'bcrypt';
  
 async function getUser(email: string): Promise<User | undefined> {
   try {
@@ -32,7 +32,7 @@ export const { auth, signIn, signOut } = NextAuth({
           const user = await getUser(email);
           if (!user) return null;
 
-          const passwordsMatch = await bcrypt.compare(password, user.password);
+          const passwordsMatch = await bcryptjs.compare(password, user.password);
 
           if(passwordsMatch){
             return user;

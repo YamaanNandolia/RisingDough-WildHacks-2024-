@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.js",
     "scripts/seed.js"
-, "../temporary/records.ts", "middleware.ts"  ],
+, "../temporary/records.ts", "../temporary/middleware.ts", "../temporary/auth.ts", "../temporary/auth.config.ts", "../temporary/sidenav.tsx", "../temporary/actions.ts", "../temporary/login-form.tsx"  ],
   "exclude": ["node_modules"]
 }
