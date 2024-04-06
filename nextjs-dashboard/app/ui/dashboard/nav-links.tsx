@@ -1,9 +1,10 @@
 'use client'
 
 import {
-  UserGroupIcon,
   HomeIcon,
-  DocumentDuplicateIcon,
+  BanknotesIcon,
+  ChartPieIcon,
+  CalendarDaysIcon
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -16,17 +17,17 @@ const links = [
   {
     name: 'Expenses',
     href: '/dashboard/expenses',
-    icon: DocumentDuplicateIcon,
+    icon: BanknotesIcon,
   },
   { name: 'Budget', 
     href: '/dashboard/budget', 
-    icon: UserGroupIcon
+    icon: ChartPieIcon
    },
    {
     
       name: 'Calendar',
       href: '/dashboard/calendar',
-      icon: DocumentDuplicateIcon,
+      icon: CalendarDaysIcon,
    }
 ];
 
