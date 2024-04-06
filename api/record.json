@@ -1,0 +1,60 @@
+{
+    "record": {
+        "Text_0": {
+            "type": "SINGLE_LINE_TEXT",
+            "value": "myAutoloan"
+        },
+        "Text_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "value": "4/31/2024 22:30:00"
+        },
+        "Updated_datetime": {
+            "type": "UPDATED_TIME",
+            "value": "2024-04-06T17:05:00Z"
+        },
+        "Created_datetime": {
+            "type": "CREATED_TIME",
+            "value": "2024-04-06T17:05:00Z"
+        },
+        "Categories": {
+            "type": "CATEGORY",
+            "value": [
+                "CarLoan"
+            ]
+        },
+        "Record_number": {
+            "type": "RECORD_NUMBER",
+            "value": "4"
+        },
+        "Text": {
+            "type": "SINGLE_LINE_TEXT",
+            "value": "$100.00"
+        },
+        "Created_by": {
+            "type": "CREATOR",
+            "value": {
+                "code": "seffe2@uic.edu",
+                "name": "seffe2@uic.edu"
+            }
+        },
+        "$revision": {
+            "type": "__REVISION__",
+            "value": "1"
+        },
+        "Updated_by": {
+            "type": "MODIFIER",
+            "value": {
+                "code": "seffe2@uic.edu",
+                "name": "seffe2@uic.edu"
+            }
+        },
+        "Text_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "value": ""
+        },
+        "$id": {
+            "type": "__ID__",
+            "value": "4"
+        }
+    }
+}
