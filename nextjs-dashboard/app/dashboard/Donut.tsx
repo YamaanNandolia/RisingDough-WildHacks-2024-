@@ -46,7 +46,7 @@ function YourChartComponent() {
     },
     plugins: {
       datalabels: {
-        formatter: function (value) {
+        formatter: function (value: number) {
           let val = Math.round(value);
           return new Intl.NumberFormat("tr-TR").format(val); //for number format
         },

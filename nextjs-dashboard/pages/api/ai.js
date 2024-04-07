@@ -3,7 +3,7 @@ const fs = require('fs');
 
 
 // Access your API key (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI("AIzaSyA5km_I5zJI-7Pj_Cn8Mt40aIksaRmUCbw");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
 
 async function run() {
   // For text-only input, use the gemini-pro model
