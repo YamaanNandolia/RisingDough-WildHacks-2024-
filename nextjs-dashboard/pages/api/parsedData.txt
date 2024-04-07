@@ -1,0 +1,34 @@
+[
+  {
+    "Company": "myAutoloan",
+    "Amount": "$100.00",
+    "Deadline": "4/31/2024 22:30:00",
+    "Categories": [
+      "CarLoan"
+    ]
+  },
+  {
+    "Company": "Sallie Mae",
+    "Amount": "$200.00",
+    "Deadline": "4/20/2024 15:00:00",
+    "Categories": [
+      "StudentLoan"
+    ]
+  },
+  {
+    "Company": "Discover",
+    "Amount": "$500.00",
+    "Deadline": "4/27/2024 12:00:00",
+    "Categories": [
+      "Credit"
+    ]
+  },
+  {
+    "Company": "BofA",
+    "Amount": "$1,000.00",
+    "Deadline": "4/28/2024 11:59:00",
+    "Categories": [
+      "Savings"
+    ]
+  }
+]

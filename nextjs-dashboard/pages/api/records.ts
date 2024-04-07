@@ -1,11 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
-        const response = await fetch('https://data-time.kintone.com/k/v1/records.json?app=5', {
+        const response = await fetch('https://data-time.kintone.com/k/v1/records.json?app=6', {
             method: 'GET',
             headers: {
-                'X-Cybozu-API-Token': '4aaoFzfwIgMNHpIqIScyPnNQRQzwU4jpN1SF05VF'
+                'X-Cybozu-API-Token': 'N0OMF6fdrrOAOKiDWGS75Q4y5y4XCiQvKeNAP48S'
             }
         });
 
@@ -16,14 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         const data = await response.json();
 
-        // const mappedData = data.records.map((record: any) => {
-        //     return {
-        //         ...record,
-        //         Company: record.Text_0.value,
-        //         Deadline: record.Text_1.value,
-        //         Amount: record.Text.value,
-        //     };
-        // });
+        console.log(data);
 
         res.status(200).json(data.records);
     } catch (error: any) {
