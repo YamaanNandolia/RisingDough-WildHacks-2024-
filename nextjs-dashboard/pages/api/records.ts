@@ -1,13 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
         const response = await fetch('https://data-time.kintone.com/k/v1/records.json?app=6', {
             method: 'GET',
             headers: {
-                'X-Cybozu-API-Token': 'N0OMF6fdrrOAOKiDWGS75Q4y5y4XCiQvKeNAP48S'
+                'X-Cybozu-API-Token': process.env.KINTONE_KEY
             }
         });
 

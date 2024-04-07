@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 "use client"
 import React, { useEffect } from 'react';
-=======
+
 export default function Page() {
-    return <p>generate Page</p>;
+    return <h1>Generate</h1>
 }
->>>>>>> 9b8b644a7721519f0b07c30207cbb029d3b72142
