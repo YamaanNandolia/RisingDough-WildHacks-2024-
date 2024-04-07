@@ -14,12 +14,14 @@ import clsx from 'clsx';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
-  { name: 'Budget', 
-    href: '/dashboard/budget', 
-    icon: ChartPieIcon
+
+   { 
+      name: 'Budget', 
+      href: '/dashboard/budget', 
+      icon: ChartPieIcon
    },
+
    {
-    
       name: 'Calendar',
       href: '/dashboard/calendar',
       icon: CalendarDaysIcon,

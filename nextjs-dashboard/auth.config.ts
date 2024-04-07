@@ -4,7 +4,7 @@ export const authConfig = {
   pages: {
     signIn: '/login',
   },
-  secret: 'qjnGf8TvslBiX9UqxEWECniZtjVBGGHyz+3np2mE3EE=',
+
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
@@ -20,3 +20,4 @@ export const authConfig = {
   },
   providers: [], 
 } satisfies NextAuthConfig;
+

@@ -3,6 +3,7 @@
 import React from 'react';
 import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
+const calendarData = require('../../../pages/api/calendarInput.js')
 
 
 export default function Page() {
@@ -16,6 +17,7 @@ export default function Page() {
           center: 'title',
           right: 'timeGridWeek,timeGridDay'
         }}
+        events={calendarData}
       />
     </div>
   );
