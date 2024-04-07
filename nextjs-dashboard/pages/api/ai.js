@@ -76,7 +76,7 @@ async function run() {
     });
 
     Now, transform this data into the following format, which is going to be your final output. 
-    This is very important; please map the values of id to id, the Categories to title, and OptimalDate to start and end with the exact same values.
+    This is very important; please put the letter T between date and time, no spaces, and please map the values of id to id, the Categories to title, and OptimalDate to start and end with the exact same values.
     Here is the format that you have to follow:
 
  {
