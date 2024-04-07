@@ -4,7 +4,6 @@ import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import { inter } from '../ui/fonts/fonts';
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
@@ -40,7 +39,10 @@ function YourChartComponent() {
   const options: any = {
     legend: {
       display: true,
-      position: "right"
+      position: "right",
+      labels: {
+        fontColor: 'black'
+      }
     },
     plugins: {
       datalabels: {
@@ -81,7 +83,7 @@ function YourChartComponent() {
 
   return (
     <div>
-      <h1 className={`${inter.className} text-2xl text-black-800 md:text-3xl text-bold text-center`}>April 2024</h1>
+      <h1 className="text-2xl text-black md:text-3xl text-bold text-center">April Expenditures</h1>
       <Doughnut data={finalData} options={options} />
     </div>);
 }
