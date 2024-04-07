@@ -13,20 +13,26 @@ function YourChartComponent() {
   let data = [
     {
       label: "Capital One",
-      value: 55,
+      value: 220,
       color: "#B1EDE8",
       cutout: "50%",
     },
     {
       label: "Discover",
-      value: 15,
+      value: 378,
       color: "rgba(0, 103, 160, 1)",
       cutout: "50%",
     },
     {
       label: "Sallie Mae",
-      value: 80,
+      value: 180,
       color: "rgba(83, 217, 217, 1)",
+      cutout: "50%",
+    },
+    {
+      label: "Chase",
+      value: 95,
+      color: "rgba(50, 240, 175, 25)",
       cutout: "50%",
     },
   ]
@@ -42,7 +48,7 @@ function YourChartComponent() {
           let val = Math.round(value);
           return new Intl.NumberFormat("tr-TR").format(val); //for number format
         },
-        color: "white",
+        color: "black",
 
         font: {
           weight: 'bold',
@@ -75,7 +81,7 @@ function YourChartComponent() {
 
   return (
     <div>
-      <h1 className={`${inter.className} text-2xl text-gray-800 md:text-3xl text-center`}> Budget</h1>
+      <h1 className={`${inter.className} text-2xl text-black-800 md:text-3xl text-bold text-center`}>April 2024</h1>
       <Doughnut data={finalData} options={options} />
     </div>);
 }
