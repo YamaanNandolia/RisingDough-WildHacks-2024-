@@ -2,6 +2,7 @@ import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import { authConfig } from './auth.config';
 import { z } from 'zod';
+import { passionOne } from './app/ui/fonts/fonts';
 
 //need to import user base from SQL
 import { sql } from '@vercel/postgres';
