@@ -33,7 +33,7 @@ export function UploadForm() {
         name="file"
         onChange={(e) => setFile(e.target.files?.[0])}
       />
-      <input type="submit" value="Upload" />
+      <input type="submit" value="Upload"/>
     </form>
   )
 }
