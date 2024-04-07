@@ -2,11 +2,13 @@ import Doughnut from './Donut';
 import React from 'react';
 import { ListGroupItem, ListGroup, Row, Col } from "reactstrap";
 import { CreditCardIcon } from '@heroicons/react/24/outline';
+import { UploadForm } from './uploadForm';
 
 export default function Page() {
 
   return (
     <main className='flex gap-6'>
+      <UploadForm />
       <div className="flex gap-6 rounded-lg bg-gray-50 px-10 py-5 md:w-2/5 md:px-20" >
         <Doughnut />
       </div>
