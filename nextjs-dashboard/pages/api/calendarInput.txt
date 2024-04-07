@@ -1,0 +1,28 @@
+  {
+    [
+    {
+      id: 'myAutoloan',
+      title: 'CarLoan',
+      start: '4/25/2024 12:00:00',
+      end: '4/25/2024 12:00:00'
+    },
+    {
+      id: 'Sallie Mae',
+      title: 'StudentLoan',
+      start: '4/10/2024 12:00:00',
+      end: '4/10/2024 12:00:00'
+    },
+    {
+      id: 'Discover',
+      title: 'Credit',
+      start: '4/10/2024 12:00:00',
+      end: '4/10/2024 12:00:00'
+    },
+    {
+      id: 'BofA',
+      title: 'Savings',
+      start: '4/23/2024 12:00:00',
+      end: '4/23/2024 12:00:00'
+    }
+  ]
+}

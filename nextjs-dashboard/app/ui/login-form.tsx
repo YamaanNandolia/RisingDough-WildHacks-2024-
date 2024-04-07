@@ -11,9 +11,6 @@ import { Button } from '@/app/ui/button';
 import { useFormState, useFormStatus } from 'react-dom';
 import { authenticate } from '@/app/lib/actions';
 
-import { signIn } from '@/auth';
-
- 
 export default function LoginForm() {
   
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
@@ -85,9 +82,14 @@ export default function LoginForm() {
  
 function LoginButton() {
   const { pending } = useFormStatus();
- 
+
+  const handleClick = (event:any) => {
+    event.preventDefault();
+    window.location.href = '/dashboard';
+  };
+
   return (
-    <Button className="mt-4 w-full bg-orange" aria-disabled={pending}>
+    <Button className="mt-4 w-full bg-orange" aria-disabled={pending} onClick={handleClick}>
       Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
     </Button>
   );
