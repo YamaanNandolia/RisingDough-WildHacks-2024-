@@ -26,7 +26,7 @@ async function run() {
     {
       "Company": "Sallie Mae",
       "Amount": "$200.00",
-      "Deadline": "4/20/2024 15:00:00",
+      "Deadline": "4/15/2024 15:00:00",
       "Categories": [
         "StudentLoan"
       ]
@@ -34,7 +34,7 @@ async function run() {
     {
       "Company": "Discover",
       "Amount": "$500.00",
-      "Deadline": "4/27/2024 12:00:00",
+      "Deadline": "4/10/2024 12:00:00",
       "Categories": [
         "Credit"
       ]
@@ -51,14 +51,16 @@ async function run() {
   
   Here is your job: 
   
-  1) Group payments that have deadlines close together, i.e. within 5 days of each other, and make an optimal payment date, ideally on the same day for them.
+  1) Group payments that have deadlines close together, i.e. within 5 days of each other, and determine the optimal payment date for each group.
+
+  2) No individual payment can be later than its deadline. 
   
-  2) Put the determined payment date in an OptimalDate variable in a format like the date in the Deadline variable.
+  3) Put the determined payment dates in an OptimalDate variable in a format like the date in the Deadline variable.
   
   Complete this task and return a js calendar in the same format as the example above. DO NOT return anything else besides the calendar.
   Only return the company, amount, deadline, category, and generated optimal date listed in the prompt. don't output backticks in the response.
   
-  Here is the calendar format that you are supposed to output:
+  This is how you generate the optimal date, which we will later transform into the final output:
   
   var calendar = new Calendar(calendarE1, {
     eventSources: [
@@ -69,11 +71,29 @@ async function run() {
         Categories : 'CarLoan',
         OptimalDate : 'mm-dd-yyyy'
       },
+      // more events...
     ],
-    backgroundColor: 'red',
-    textColor: 'white'
+    });
 
-});
+    Now, transform this data into the following format, which is going to be your final output. 
+    This is very important; please map the values of id to id, the Categories to title, and OptimalDate to start and end with the exact same values.
+    Here is the format that you have to follow:
+
+ {
+  [
+        {
+        id: 'a',
+        title: 'my event',
+        start: '2024-04-25T12:00:00',
+        end: '2024-04-25T12:00:00',
+        },
+        // More events...
+    ],
+    color: 'blue',
+    textColor: 'white',
+  }
+
+  Map the values of id to id, the Categories to title, and OptimalDate to start and end with the exact same values.
   `
 
   const result = await model.generateContent(prompt);
@@ -81,7 +101,7 @@ async function run() {
   const text = response.text();
   console.log(text);
 
-  fs.writeFile('calendarInput.js', text, (err) => {
+  fs.writeFile('calendarInput.txt', text, (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
   });
