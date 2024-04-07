@@ -4,7 +4,8 @@ import {
   HomeIcon,
   BanknotesIcon,
   ChartPieIcon,
-  CalendarDaysIcon
+  CalendarDaysIcon,
+  BeakerIcon
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -25,7 +26,13 @@ const links = [
       name: 'Calendar',
       href: '/dashboard/calendar',
       icon: CalendarDaysIcon,
-   }
+   },
+
+   {
+    name: 'Generate',
+    href: '/dashboard/generate',
+    icon: BeakerIcon,
+  }
 ];
 
 export default function NavLinks() {
