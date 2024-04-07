@@ -1,8 +1,15 @@
 import AcmeLogo from '@/app/ui/acme-logo';
-import { CalendarDaysIcon } from '@heroicons/react/24/outline';
-// import LoginForm from '@/app/ui/login-form';
+import LoginForm from '@/app/ui/login-form';
+import { useRouter } from 'next/router';
  
 export default function LoginPage() {
+
+  const router = useRouter();
+
+  const handleLogin = async () => {
+    await router.push('/dashboard');
+  }
+
   return (
     <main className="flex items-center justify-center md:h-screen">
       <div className="relative mx-auto flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32">
@@ -11,6 +18,7 @@ export default function LoginPage() {
             <AcmeLogo />
           </div>
         </div>
+        <LoginForm/>
       </div>
     </main>
   );
