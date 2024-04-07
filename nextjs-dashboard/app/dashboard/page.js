@@ -9,11 +9,11 @@ export default function Page() {
   return (
     <main className='grid grid-cols-1 md:grid-cols-2 gap-6'>
       <div className="md:col-span-1 gap-6 flex flex-col">
-        <div className="flex gap-6 rounded-lg bg-gray-100 px-10 py-5 md:px-20" >
+        <div className="flex gap-6 rounded-lg bg-gray-100 px-10 py-5 md:px-20 justify-center items-center">
           <Doughnut />
         </div>
-        <div className="flex gap-6 rounded-lg bg-gray-100 px-10 py-5 md:px-20" >
-        <h1 className="text-2xl text-black-800 md:text-3xl text-bold text-center">Upload</h1>
+        <div className="flex gap-6 rounded-lg bg-gray-100 px-10 py-5 md:px-20 justify-center items-center">
+          <h1 className="text-2xl text-black-800 md:text-3xl text-bold text-center">Upload</h1>
           <UploadForm />
         </div>
       </div>
@@ -79,6 +79,12 @@ export default function Page() {
               </Row>
             </ListGroupItem>
           </ListGroup>
+          <button className="mt-4 w-full bg-orange">
+            Connect Account
+          </button>
+          <button className="mt-4 w-full bg-orange">
+            Disconnect Account
+          </button>
         </div>
 
       </div>
