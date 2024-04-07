@@ -21,7 +21,7 @@ const config: Config = {
         white : '#FFFCF9',
         iceblue: '#B1EDE8',
         red : '#A31621',
-        orange : 'EB5E28',
+        orange : '#EB5E28',
       },
     },
     keyframes: {
