@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const response = await fetch('https://data-time.kintone.com/k/v1/records.json?app=6', {
             method: 'GET',
             headers: {
-                'X-Cybozu-API-Token': process.env.KINTONE_KEY
+                'X-Cybozu-API-Token': process.env.KINTONE_KEY as string
             }
         });
 

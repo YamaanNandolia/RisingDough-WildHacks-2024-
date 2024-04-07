@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }));
 
         // Access your API key (see "Set up your API key" above)
-        const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
+        const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY2);
         
         // For text-only input, use the gemini-pro model
         const model = genAI.getGenerativeModel({ model: "gemini-pro"});
@@ -73,18 +73,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         id: 'a',
         title: 'my event',
         start: '2024-04-25T12:00:00',
-        end: '2024-04-25T12:00:00',
+        end: '2024-04-25T12:00:00'
         },
         // More events...
     ]
 
-
     please map the values of id to id, the Categories to title, and OptimalDate to start and end with the exact same values. Return data in this format.
+    pay attention to the timestamp, it needs to be ISO 8601 format.
+    please make sure the response can be parsed as JSON correctly.
   `
         const genAIOutput = await model.generateContent(prompt);
         const genAIResponse = await genAIOutput.response;
         const finalOutput = genAIResponse.text();
-        console.log(finalOutput);
+        
+        // const mappedData = finalOutput.map((item: { id: any; Categories: any; OptimalDate: any; }) => ({
+        //     id: item.id,
+        //     title: item.Categories,
+        //     start: item.OptimalDate || '4/31/2024T12:00:00',
+        //     end: item.OptimalDate || '4/31/2024T12:00:00',
+        // }));
 
         res.status(200).send(finalOutput);
     } catch (error: any) {
