@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.js",
     "scripts/seed.js"
-, "app/dashboard/Donut.tsx", "app/dashboard/page.js"  ],
+, "app/dashboard/Donut.tsx", "app/dashboard/page.js", "app/dashboard/budget/page.js", "app/dashboard/budget/crapform.js"  ],
   "exclude": ["node_modules"]
 }

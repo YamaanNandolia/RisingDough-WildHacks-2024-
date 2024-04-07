@@ -28,11 +28,7 @@ const links = [
       icon: CalendarDaysIcon,
    },
 
-   {
-    name: 'Generate',
-    href: '/dashboard/generate',
-    icon: BeakerIcon,
-  }
+   
 ];
 
 export default function NavLinks() {
