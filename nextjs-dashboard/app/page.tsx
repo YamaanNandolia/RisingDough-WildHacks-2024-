@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import { inter } from '@/app/ui/fonts/fonts';
 import Image from 'next/image'; 
-import myImage from './bread.jpg';
+import myImage from './breadman.webp';
 
 export default function Page() {
   return (
